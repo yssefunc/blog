@@ -1,0 +1,259 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<title>{% block title %}Movies{% endblock %}</title>
+  {% block css %}
+  <link rel="stylesheet" href="{{ MEDIA_URL }}css/styles.css" type="text/css" media="screen"/>
+  <link rel="stylesheet" href="{{ MEDIA_URL }}style.css" type="text/css" media="screen" />
+  
+       
+
+ 
+  <script type="text/javascript">var _siteRoot='index.html',_root='index.html';</script>
+  <script type="text/javascript" src="{{ MEDIA_URL }}js/jquery.js"></script>
+  <script type="text/javascript" src="{{ MEDIA_URL }}js/scripts.js"></script>
+ 
+{% endblock %}
+        <style>
+            *{
+                padding:0;
+                margin:0;
+            }
+			body{
+                background:#f0f0f0;
+                font-family:"Helvetica Neue",Arial,Helvetica,Geneva,sans-serif;
+				overflow-x:hidden;
+
+            }
+            h1{
+                font-size:180px;
+                line-height:180px;
+                text-transform: uppercase;
+                color:#f9f9f9;
+                position:absolute;
+                text-shadow:0 1px 1px #ddd;
+                top:-25px;
+                left:-20px;
+                white-space: nowrap;
+            }
+            span.reference{
+                position:fixed;
+                left:10px;
+                bottom:10px;
+                font-size:11px;
+            }
+            span.reference a{
+                color:#DF7B61;
+                text-decoration:none;
+                text-transform: uppercase;
+                text-shadow:0 1px 0 #fff;
+            }
+            span.reference a:hover{
+                color:#000;
+            }
+            .box{
+                margin-top:-3px;
+                height:0px;
+				width:100%;
+                position:relative;
+                background:#fff  no-repeat 380px 180px;
+				-moz-box-shadow:0px 0px 10px #aaa;
+				-webkit-box-shadow:0px 0px 10px #aaa;
+				-box-shadow:0px 0px 10px #aaa;
+            }
+            .box h2{
+				color:#f0f0f0;
+				padding:40px 10px;
+				text-shadow:1px 1px 1px #ccc;
+            }
+
+        </style>
+</head>
+ {% block content%}
+<body topmargin="0" leftmargin="0" rightmargin="0" bottommargin="0" marginwidth="0" marginheight="0" style="background-image:img/background.png">
+
+<table border="0" width="100%" id="table1" cellspacing="0" cellpadding="0">
+	<tr>
+		<td>
+		<table border="1" width="100%" id="table2">
+			<tr>
+				<td width="130">&nbsp;</td>
+				<td>
+				<img border="0" src="{{ MEDIA_URL }}images/bannerJ.jpg" width="1000" height="156"></td>
+				<td width="130">&nbsp;</td>
+			</tr>
+		</table>
+		<table border="1" width="100%" id="table3">
+			<tr>
+				<td width="130">&nbsp;</td>
+				<td>
+				<div class="box">
+			
+			<ul id="ldd_menu" class="ldd_menu">
+				<li>
+					<span>Main Page</span><!-- Increases to 510px in width-->
+					
+				</li>
+				<li>
+					 <span> <a href="/archive">
+						Archive  </a></span>
+				
+				</li>
+				<li>
+					<span><a href="/login" class="thickbox"> 
+					LogIn</a></span>
+					
+				</li>
+				
+					<li>
+					<span> <a href="/register" class="thickbox"> 
+					Register</a></span>
+					
+				</li>
+			</ul>
+		</div>
+
+        <div>
+           
+        </div>
+		<!-- The JavaScript -->
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+        <script type="text/javascript">
+            $(function() {
+				/**
+				 * the menu
+				 */
+				var $menu = $('#ldd_menu');
+				
+				/**
+				 * for each list element,
+				 * we show the submenu when hovering and
+				 * expand the span element (title) to 510px
+				 */
+				$menu.children('li').each(function(){
+					var $this = $(this);
+					var $span = $this.children('span');
+					$span.data('width',$span.width());
+					
+					$this.bind('mouseenter',function(){
+						$menu.find('.ldd_submenu').stop(true,true).hide();
+						$span.stop().animate({'width':'510px'},300,function(){
+							$this.find('.ldd_submenu').slideDown(300);
+						});
+					}).bind('mouseleave',function(){
+						$this.find('.ldd_submenu').stop(true,true).hide();
+						$span.stop().animate({'width':$span.data('width')+'px'},300);
+					});
+				});
+            });
+        </script>	
+				
+				</td>
+				<td width="130">&nbsp;</td>
+			</tr>
+		</table>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		
+		<br />
+		<br /><br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<table border="1" width="100%" id="table4">
+			<tr>
+				<td width="130">&nbsp;</td>
+				<td>
+				 <div id="header"><div class="wrap">
+   <div id="slide-holder">
+<div id="slide-runner">
+    <a href=""><img id="slide-img-1" src="{{ MEDIA_URL}}images/nature-photo.png" class="slide" alt="" /></a>
+    <a href=""><img id="slide-img-2" src="{{ MEDIA_URL}}images/nature-photo1.png" class="slide" alt="" /></a>
+    <a href=""><img id="slide-img-3" src="{{ MEDIA_URL}}images/nature-photo2.png" class="slide" alt="" /></a>
+    <a href=""><img id="slide-img-4" src="{{ MEDIA_URL}}images/nature-photo3.png" class="slide" alt="" /></a>
+    <a href=""><img id="slide-img-5" src="{{ MEDIA_URL}}images/nature-photo4.png" class="slide" alt="" /></a>
+    <a href=""><img id="slide-img-6" src="{{ MEDIA_URL}}images/nature-photo4.png" class="slide" alt="" /></a>
+	<a href=""><img id="slide-img-7" src="{{ MEDIA_URL}}images/nature-photo6.png" class="slide" alt="" /></a> 
+    <div id="slide-controls">
+     <p id="slide-client" class="text"><strong>post: </strong><span></span></p>
+     <p id="slide-desc" class="text"></p>
+     <p id="slide-nav"></p>
+    </div>
+</div>
+	
+	<!--content featured gallery here -->
+   </div>
+   <script type="text/javascript">
+    if(!window.slider) var slider={};slider.data=[{"id":"slide-img-1","client":"nature beauty","desc":"nature beauty photography"},{"id":"slide-img-2","client":"nature beauty","desc":"add your description here"},{"id":"slide-img-3","client":"nature beauty","desc":"add your description here"},{"id":"slide-img-4","client":"nature beauty","desc":"add your description here"},{"id":"slide-img-5","client":"nature beauty","desc":"add your description here"},{"id":"slide-img-6","client":"nature beauty","desc":"add your description here"},{"id":"slide-img-7","client":"nature beauty","desc":"add your description here"}];
+   </script>
+  </div></div><!--/header-->
+				
+				</td>
+				<td width="130">&nbsp;</td>
+			</tr>
+		</table>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		
+		<br />
+		&nbsp;<table border="1" width="100%" id="table8">
+			<tr>
+				<td>
+				<p align="center">WATCH FILM</td>
+			</tr>
+		</table>
+		<p>
+		<br />
+		<br />
+		
+		</p>
+		
+		<br />
+		<br />
+		
+		<table border="1" width="100%" id="table6">
+			<tr>
+				<td width="130">&nbsp;</td>
+				<td><img src="{{ MEDIA_URL}}images/taken.jpg" width="213" height="298">&nbsp;</td>
+				<td><img src="{{ MEDIA_URL}}images/taken.jpg" width="213" height="298">&nbsp;</td>
+
+				<td><img src="{{ MEDIA_URL}}images/taken.jpg" width="213" height="298">&nbsp;</td>
+				<td width="130">&nbsp;</td>
+			</tr>
+		</table>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		
+		<br />
+		<br />
+		
+		<table border="1" width="100%" id="table7">
+			<tr>
+				<td width="130">&nbsp;</td>
+				<td>
+				<img border="0" src="{{ MEDIA_URL }}img/footer.jpg" width="1000" height="156"></td>
+				<td width="130">&nbsp;</td>
+			</tr>
+		</table>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</p>
+		<p>&nbsp;</td>
+	</tr>
+</table>
+
+</body>
+{% endblock %}
+</html>
